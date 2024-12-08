@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    background-image: url('https://avatars.mds.yandex.net/i?id=b73ab9a30631604735d02a92078fdd57b88f3554-8715693-images-thumbs&n=13');
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent repetition */
+    background-position: center center; /* Center the image */
+    height: 80vh; /* Set height to 100% of the viewport height */
+    max-height: 70%; /* this makes it work properly even if content stretches the page */
+    
+}
+
+nav {
+    background-color: #000000;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.link-case { /* Styles for the new link container */
+    background-color: #000000; /* Light gray background */
+    padding: 1rem;
+    text-align: center;
+}
+
+.link-case ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center links horizontally */
+}
+
+.link-case li {
+    margin: 0 1rem;
+}
+
+.link-case a {
+    text-decoration: none;
+    color: #333; /* Dark gray link color */
+    padding: 0.5rem 1rem;
+    border: 1px solid blue; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+
+.car {
+    
+    flex-shrink: 0;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #138aeb;
+    border-radius: 5px;
+    background-color: #111111;
+    scroll-snap-align: start;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+    padding-right: 10px;
+    
+}
+.card-title2 {
+    flex: 1; /* Make the title take up available space */
+    margin-bottom: 0; /* Remove unnecessary margin */
+    text-align: center;
+    color: rgb(231, 231, 243);
+    font-size: 40px;
+}
+.text {
+    flex: 1; /* Make the title take up available space */
+    margin-bottom: 0; /* Remove unnecessary margin */
+    text-align: center;
+    color: rgb(232, 232, 241);
+    font-size: 17px;
+}
+
+
+
+.card-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 70px;
+}
+
+.card {
+    max-width: 530px;
+    flex-shrink: 0;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #138aeb;
+    border-radius: 5px;
+    background-color: #111111;
+    scroll-snap-align: start;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;  /* Add some space below the title */
+}
+
+.card-title {
+    flex: 1; /* Make the title take up available space */
+    margin-bottom: 0; /* Remove unnecessary margin */
+    text-align: center;
+    color: blue;
+}
+
+.show-text {
+    text-decoration: underline;
+    color: blue;
+    margin-left: 10px;
+}
+
+
+.hidden-text {
+    display: none;
+    padding: 20px;
+    margin-top: 10px; /* Add margin above the hidden text */
+    text-align: left;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.hidden-text:target {
+    display: block;
+}
+img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover; 
+    padding-left: 100px;
+    padding-right: 10px;
+    
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        margin: 5px 0;
+    }
+    
+    .card {
+        min-width: 100%;
+        flex-shrink: 1;
+    }
+    .card-container {
+        overflow-x: visible;
+        scroll-snap-type: none;
+    }
+    .card .card-title {
+        max-width: 90%;
+    }
+
+}
